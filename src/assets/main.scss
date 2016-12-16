@@ -1,4 +1,56 @@
 @import '~foundation/scss/foundation';
 body {
-    background: lightsteelblue;
+    background: #fff;
+}
+
+header {
+    position: relative;
+    height: 47px;
+    padding: 3px 15px;
+    h3 {
+        display: inline-block;
+        color: white;
+        padding: 0;
+        margin: 0;
+        font-size: 1.7em;
+    }
+    max-width: 100%;
+    background: #1976D2;
+    img {
+        max-width: 55px;
+    }
+    width: 100%;
+}
+
+.navbar {
+    overflow: hidden;
+    position: absolute;
+    top: 7px;
+    right: 30px;
+    display: block;
+    z-index: 1000;
+}
+
+.burger-nav {
+    background: url(assets/img/hamburger.png) no-repeat 100% center;
+    display: block;
+    height: 33px;
+    width: 40px;
+    cursor: pointer;
+    float: right;
+}
+
+.alignLeft {
+    float: left;
+}
+
+.alignRight {
+    float: right;
+}
+
+nav ul {
+    position: relative;
+    margin-top: 50px;
+    height: 0px;
+    overflow: hidden;
 }
