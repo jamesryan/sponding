@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Input, EventEmitter } from '@angular/core';
+import {Animations} from './services/animations.service';
+
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +10,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Sponding...';
+  isactive:boolean = false;
+
+  constructor(private animate: Animations) {
+
+  }
+
+  openMenu() {
+    
+  }
 }

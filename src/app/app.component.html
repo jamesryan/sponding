@@ -2,17 +2,19 @@
 
     <h3>Sponding.io</h3>
     <nav class="navbar">
-        <a class="burger-nav"></a>
-        <ul class="nav alignRight">
-            <li><a href="/">home</a></li>
-            <li>
-                <a href="">features</a>
-            </li>
-            <li> <a href="">blog</a></li>
-            <li> <a href="">downloads</a></li>
-        </ul>
-    </nav>
+        <button class="c-hamburger c-hamburger--htx" [class.isactive]="isactive" (click)="isactive = !isactive">
+            <span>toggle menu</span>
+        </button>
 
+    </nav>
+    <div class="menu-container">
+        <ul>
+            <li>home</li>
+            <li>loading</li>
+            <li>work</li>
+
+        </ul>
+    </div>
 
 </header>
 <main>
