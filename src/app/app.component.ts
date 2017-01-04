@@ -11,12 +11,13 @@ import {Animations} from './services/animations.service';
 export class AppComponent {
   title = 'Sponding...';
   isactive:boolean = false;
+  @Input() menuOpen: boolean;
 
   constructor(private animate: Animations) {
 
   }
 
-  openMenu() {
+  toggleMenu() {
     
   }
 }

@@ -2,12 +2,12 @@
 
     <h3>Sponding.io</h3>
     <nav class="navbar">
-        <button class="c-hamburger c-hamburger--htx" [class.isactive]="isactive" (click)="isactive = !isactive">
+        <button class="c-hamburger c-hamburger--htx" click="toggleMenu()">
             <span>toggle menu</span>
         </button>
 
     </nav>
-    <div class="menu-container">
+    <div class="menu-container" [ngClass]="{open: menuOpen}">
         <ul>
             <li>home</li>
             <li>loading</li>
