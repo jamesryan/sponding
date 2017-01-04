@@ -1,4 +1,4 @@
-import { Component, Input, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import {Animations} from './services/animations.service';
 
 
@@ -11,13 +11,36 @@ import {Animations} from './services/animations.service';
 export class AppComponent {
   title = 'Sponding...';
   isactive:boolean = false;
-  @Input() menuOpen: boolean;
+  @Output() menuStatusChange: EventEmitter<boolean> = new EventEmitter<boolean>();
+  menuOpen: boolean  = false;
+  openClass = 'open';
 
   constructor(private animate: Animations) {
 
   }
+  menuChange(value) {
+    this.menuStatusChange.emit(value);
+  }
+  menuOpener() {
+    this.menuChange(true);
+  }
+  menuClose() {
+    this.menuChange(false);
+  }
+
+  // toggleMenu() {
+  //   if(!this.menuOpen) {
+  //     this.menuOpen = true;
+  //   }
+  //   else {
+  //     this.menuOpen = false;
+  //   }
+  //   this.menuChange(this.menuOpen);
+  // }
 
   toggleMenu() {
-    
+    console.log("WTH!");
+    this.menuOpen = !this.menuOpen;
+    this.openClass = this.menuOpen ? 'open' : 'close';
   }
 }
