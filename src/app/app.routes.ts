@@ -8,3 +8,4 @@ export const ROUTES: Routes = [
     {path: 'work', component: WorkComponent},
     {path: 'loader', component: LoaderComponent}
 ];
+

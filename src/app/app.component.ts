@@ -39,7 +39,7 @@ export class AppComponent {
   // }
 
   toggleMenu() {
-    console.log("WTH!");
+    
     this.menuOpen = !this.menuOpen;
     this.openClass = this.menuOpen ? 'open' : 'close';
   }
