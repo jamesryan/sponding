@@ -41,6 +41,10 @@ main {
     color: #fff;
 }
 
+button {
+    background-color: #cb0032 !important;
+}
+
 .container {
     max-width: 1100px;
     width: 100%;
@@ -210,9 +214,10 @@ nav ul {
 
 .menu-container {
     position: absolute;
-    width: 96px;
+    width: 200px;
     top: 8px;
     right: 30px;
+    opacity: 0;
     transition: all 0.5s;
     background: #0000ff;
     color: #fff;
@@ -220,7 +225,8 @@ nav ul {
         list-style: none;
     }
     &.open {
-        top: 125px;
+        top: 103px;
+        opacity: 0.7;
         transition: all 0.5s;
     }
 }

@@ -9,9 +9,10 @@
     </nav>
     <div class="menu-container" [ngClass]="{open: menuOpen}">
         <ul>
-            <li>home</li>
-            <li>loading</li>
-            <li>work</li>
+            <li><a [routerLink]="['/']">home</a>
+            </li>
+            <li><a [routerLink]="['/loader']">loading</a></li>
+            <li><a [routerLink]="['/work']">work</a></li>
 
         </ul>
     </div>
