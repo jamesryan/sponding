@@ -1,0 +1,27 @@
+<header class="l-header v-center-parent">
+
+    <h3><a [routerLink]="['/']">
+    Sponding.io</a></h3>
+    <nav class="navbar">
+        <button class="c-hamburger c-hamburger--htx" [ngClass]="{isactive: menuOpen}" (click)="toggleMenu()">
+            <span>toggle menu</span>
+        </button>
+
+    </nav>
+    <div class="menu-container" [ngClass]="{open: menuOpen}">
+        <ul>
+            <li><a [routerLink]="['/']">home</a>
+            </li>
+            <li><a [routerLink]="['/loader']">loading</a></li>
+            <li><a [routerLink]="['/work']">work</a></li>
+
+        </ul>
+    </div>
+
+</header>
+<main>
+    <router-outlet></router-outlet>
+</main>
+
+<!--http://onlineoramalama.com/#/-->
+<!--http://ariixcreativedev.com/#/-->
