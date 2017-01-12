@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import {Http, Response} from '@angular/http';
 import {Observable} from 'rxjs';
 
+declare var TweenMax: any;
+declare var TimelineMax: any;
+
+
 @Component({
   selector: 'app-mid',
   templateUrl: './mid.component.html',
@@ -15,41 +19,20 @@ export class MidComponent implements OnInit {
   constructor( private _http: Http) {
    }
 
-   getInfo() {
-    this._http.get(this.imageUrl)
-      .flatMap((data) => data.json())
+  //  getInfo() {
+  //   this._http.get(this.imageUrl)
+  //     .flatMap((data) => data.json())
 
-      .subscribe(
-      (data) => {
-        this.info.push(data);
-      }
+  //     .subscribe(
+  //     (data) => {
+  //       this.info.push(data);
+  //     }
 
-      );
-      
-
-  }
-   
-  //  getImages(url) {
-  //    console.log(this._http.get(this.imageUrl).map(res => res.json()));
-  //    return this._http.get(url).map(res => res.json())
-     
-  //  }
-
-  //  getImaging() {
-  //    this.getImages(this.imageUrl).subscribe(
-  //      data => this.receiveImages(data),
-  //      error => console.log('Error in service')
-  //    )
-  //  }
-
-  //  receiveImages(data) {
-  //    let img = data[0];
-  //    this.images = img;
-  //    //console.log('F ' + img.url);
-  //  }
+  //     );
+  // }
 
   ngOnInit() {
-   this.getInfo();
+   // this.getInfo();
   }
 
 }
