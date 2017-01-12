@@ -9,7 +9,9 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import {WorkComponent} from './work/work.component';
 import {LoaderComponent} from './loader/loader.component';
+
 import {MidComponent} from './mid/mid.component';
+
 
 //providers
 import {HttpService} from './services/http.service';
@@ -20,8 +22,11 @@ import {Animations} from './services/animations.service';
     AppComponent,
     HomeComponent,
     WorkComponent,
+
     LoaderComponent,
-    MidComponent
+    MidComponent,
+    LoaderComponent
+
   ],
   imports: [
     BrowserModule,
