@@ -1,10 +1,13 @@
 [{
+"name": "kiss",
 "url": "../assets/img/IMG_0903.JPG"
 },
 {
+"name": "homer",
 "url": "../assets/img/IMG_0905.JPG"
 },
 {
+"name": "something else",
 "url": "../assets/img/IMG_0906.JPG"
 }
 ]

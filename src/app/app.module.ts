@@ -11,6 +11,7 @@ import {WorkComponent} from './work/work.component';
 import {LoaderComponent} from './loader/loader.component';
 
 import {MidComponent} from './mid/mid.component';
+import { InitObservableComponent } from  './init-observable/init-observable.component';
 
 
 //providers
@@ -25,7 +26,8 @@ import {Animations} from './services/animations.service';
 
     LoaderComponent,
     MidComponent,
-    LoaderComponent
+    LoaderComponent,
+    InitObservableComponent
 
   ],
   imports: [

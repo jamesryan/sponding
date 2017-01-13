@@ -1,14 +1,18 @@
 import { Injectable } from '@angular/core';
 import {Http, Response} from '@angular/http';
 import {Headers, RequestOptions} from '@angular/http';
+import {IImages} from '../../interface/images';
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/Rx';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
 @Injectable()
 export class HttpService {
+    imgUrl: string= '../app/api/pics.json';
   contactUrl: string = 'https://shopdev.ariix.com/OnlineServices/endPointsAPI/pushCustomerInfo'; //firstname=fName&lastname=lName&emailAddr=fname@email.com
-  languageUrl: string = '/api/languages.json';
+ // languageUrl: string = '/api/languages.json';
+  images = new BehaviorSubject<IImages[]>([]);
+  imagesAnnounced$ = this.images.asObservable();
 
   // info
   language: string = 'English';
@@ -20,7 +24,18 @@ export class HttpService {
   languageAnnounced$ = this.languageKey.asObservable();
 
   constructor(private _http: Http) {
-      this.getLanguages();
+      // this.getLanguages();
+      this.getImages();
+  }
+
+  getImages() {
+      this._http.get(this.imgUrl).subscribe((response: any) => {
+          let res = response.json();
+          this.updateImages(res);
+      });
+  }
+  updateImages(images: IImages[]) {
+      this.images.next(images);
   }
 
     getInfo(url) {
@@ -48,12 +63,12 @@ export class HttpService {
         this.updateContent();
     }
 
-    getLanguages() {
-        this.getInfo(this.languageUrl).subscribe(
-            data => this.receivelanguages(data),
-            error => console.log('Error HTTP Service')
-        );
-    }
+    // getLanguages() {
+    //     // this.getInfo(this.languageUrl).subscribe(
+    //         data => this.receivelanguages(data),
+    //         error => console.log('Error HTTP Service')
+    //     );
+    // }
 
     setLanguages(language) {
         this.language = language;

@@ -7,7 +7,6 @@ body {
     box-sizing: border-box;
 }
 
-<<<<<<< HEAD
 a {
     color: #fff;
     &:hover {
@@ -22,8 +21,6 @@ img {
     max-width: 100%;
 }
 
-=======
->>>>>>> 7b930855d9e1c9143c8a9f16437d0cfbe3beb912
 header {
     position: relative;
     height: 47px;
@@ -246,10 +243,11 @@ nav ul {
         opacity: 0.7;
         transition: all 0.5s;
     }
-<<<<<<< HEAD
 }
 
-.work-imgs {
+.work-imgs,
+.img-wrap {
+    position: relative;
     width: 100%;
     // margin: 0 auto;
 }
@@ -257,6 +255,4 @@ nav ul {
 .work-img {
     display: inline-block;
     width: 33.333%;
-=======
->>>>>>> 7b930855d9e1c9143c8a9f16437d0cfbe3beb912
 }
