@@ -39,11 +39,7 @@ export class MidComponent implements OnInit {
         this.images = images;
     }
 
-
-  
-
   ngOnInit() {
-  
   }
 
 }

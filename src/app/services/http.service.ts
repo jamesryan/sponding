@@ -8,8 +8,8 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
 @Injectable()
 export class HttpService {
-    imgUrl: string= '../app/api/pics.json';
-  contactUrl: string = 'https://shopdev.ariix.com/OnlineServices/endPointsAPI/pushCustomerInfo'; //firstname=fName&lastname=lName&emailAddr=fname@email.com
+    imgUrl: string= "../assets/api/pics.json";
+//  contactUrl: string = 'https://shopdev.ariix.com/OnlineServices/endPointsAPI/pushCustomerInfo'; //firstname=fName&lastname=lName&emailAddr=fname@email.com
  // languageUrl: string = '/api/languages.json';
   images = new BehaviorSubject<IImages[]>([]);
   imagesAnnounced$ = this.images.asObservable();
@@ -31,6 +31,7 @@ export class HttpService {
   getImages() {
       this._http.get(this.imgUrl).subscribe((response: any) => {
           let res = response.json();
+          JSON.stringify(res);
           this.updateImages(res);
       });
   }
@@ -83,18 +84,18 @@ export class HttpService {
         }
     }
 
-    postContact(model: any) {
+    // postContact(model: any) {
 
-        let headers = new Headers({'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'});
-        let params = `firstname=${model.firstname}&lastname=${model.lastname}&emailAddr=${model.emailAddr}`;
+    //     let headers = new Headers({'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'});
+    //     let params = `firstname=${model.firstname}&lastname=${model.lastname}&emailAddr=${model.emailAddr}`;
 
-        return this._http.post(this.contactUrl, params, {headers: headers})
-            .map(res => res.json())
-            .catch(this.handleError);
-    }
+    //     return this._http.post(this.contactUrl, params, {headers: headers})
+    //         .map(res => res.json())
+    //         .catch(this.handleError);
+    // }
 
-    private handleError (error: Response) {
-        return Observable.throw(error.json().error || ' error');
-    }
+    // private handleError (error: Response) {
+    //     return Observable.throw(error.json().error || ' error');
+    // }
 
 }

@@ -10,11 +10,11 @@ const pngquant = require('imagemin-pngquant');
 // });
 
 gulp.task('images', function() {
-    gulp.src('src/assets/images/**/*')
-        .pipe(imagemin({
-            progressive: true,
-            svgoPlugins: [{ removeViewBox: false }],
-            use: [pngquant()]
-        }))
-        .pipe(gulp.dest('src/assets/images'));
+gulp.src('src/assets/img/**/*')
+.pipe(imagemin({
+progressive: true,
+svgoPlugins: [{ removeViewBox: false }],
+use: [pngquant()]
+}))
+.pipe(gulp.dest('src/assets/img'));
 });

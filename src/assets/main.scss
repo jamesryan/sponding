@@ -252,7 +252,34 @@ nav ul {
     // margin: 0 auto;
 }
 
+.pic {
+    border: 5px solid #cb0032;
+    height: 300px;
+    width: 300px;
+    margin: -5px;
+    overflow: hidden;
+}
+
 .work-img {
     display: inline-block;
     width: 33.333%;
+}
+
+.work-img img {
+    transition: all 1s ease;
+    &:hover {
+        width: 105%;
+        height: 105%;
+    }
+}
+
+@media only screen and (max-width: 840px) {
+    .work-img {
+        position: relative;
+        margin: 0 auto;
+        width: 100%;
+        img {
+            margin: 0 auto;
+        }
+    }
 }
