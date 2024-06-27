@@ -15,8 +15,8 @@ declare var TimelineMax: any;
 })
 export class MidComponent implements OnInit {
   images;
-  url: string = '';
-  name: string = '';
+  url = '';
+  name = '';
 
 
   // imageUrl =  '../app/api/pics.json'; //'https://shopdev.ariix.com/OnlineServices/API/distInfo?distId=2641367';

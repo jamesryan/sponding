@@ -8,14 +8,14 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
 @Injectable()
 export class HttpService {
-    imgUrl: string= "../assets/api/pics.json";
+    imgUrl= "../assets/api/pics.json";
 //  contactUrl: string = 'https://shopdev.ariix.com/OnlineServices/endPointsAPI/pushCustomerInfo'; //firstname=fName&lastname=lName&emailAddr=fname@email.com
  // languageUrl: string = '/api/languages.json';
   images = new BehaviorSubject<IImages[]>([]);
   imagesAnnounced$ = this.images.asObservable();
 
   // info
-  language: string = 'English';
+  language = 'English';
   languages = [];
   content = new BehaviorSubject<any>([]);
   languageKey = new BehaviorSubject<string>(this.language);
