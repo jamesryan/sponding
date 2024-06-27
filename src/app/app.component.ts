@@ -10,9 +10,9 @@ import {Animations} from './services/animations.service';
 })
 export class AppComponent {
   title = 'Sponding...';
-  isactive:boolean = false;
+  isactive = false;
   @Output() menuStatusChange: EventEmitter<boolean> = new EventEmitter<boolean>();
-  menuOpen: boolean  = false;
+  menuOpen  = false;
   openClass = 'open';
 
   constructor(private animate: Animations) {

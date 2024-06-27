@@ -12,7 +12,7 @@ declare var TimelineMax: any;
 export class HomeComponent implements OnInit {
 
 
-  fo: string = '#fo';
+  fo = '#fo';
 
   constructor() { }
 

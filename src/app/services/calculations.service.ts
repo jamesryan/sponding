@@ -8,7 +8,7 @@ export class CalculationsService {
     private healthScoreForm = new BehaviorSubject<any>([]);
     private days = new BehaviorSubject<number>(0);
     private metricSystem = new BehaviorSubject<boolean>(this.metric);
-    public metric: boolean = false;
+    public metric = false;
 
     calculatorFormAnnounced$ = this.calculatorForm.asObservable();
     healthScoreFormAnnounced$ = this.healthScoreForm.asObservable();
@@ -17,7 +17,7 @@ export class CalculationsService {
 
     public numberPattern = '^[0-9.]+$';
     public percentagePattern = '^[0-9.%]+$';
-    dateFormat: string = 'MM/dd/yy';
+    dateFormat = 'MM/dd/yy';
 
     public calculationsModel = {
         'gender'        : 'f',
